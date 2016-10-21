@@ -1,0 +1,56 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<title>Resumetry</title>
+</head>
+<body>
+<div class="container" ng-controller="AppCtrl">
+<h1><center>Input data for your resume!</center></h1><br>
+
+<table class="table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Number</th>
+<th>Action</th>
+<th>&nbsp;</th>
+</thead>
+<tbody>
+<tr ng-repeat="contact in contactlist">
+<td>{{contact.name}}</td>
+<td>{{contact.email}}</td>
+<td>{{contact.number}}</td>
+<td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
+<td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
+</tr>
+</tbody>
+<form method="put" action="/create/resuming.html">
+<h2>Basic Information</h2><br>
+Full Name: <input type="text" ng-model="user.name"/><br><br>
+Email: <input type="email" ng-model="user.email"/><br><br>
+Phone: <input type="text" ng-model="user.phone"/><br><br>
+Address: <input type="textarea" ng-model="user.address"/><br><br>
+<h2>Work Experience</h2><br><br>
+Job title: <input type="text" ng-model="user.title"/><br><br>
+Company name: <input type="text" ng-model="user.company"/><br><br>
+Poition: <input type="text" ng-model="user.position"/><br><br>
+Years: <input type="number" ng-model="user.years"/><br><br>
+<h2>Education</h2><br><br>
+University: <input type="text" ng-model="user.university"/><br><br>
+College: <input type="text" ng-model="user.college"/><br><br>
+Major: <input type="text" ng-model="user.major"/><br><br>
+GPA: <input type="number" ng-model="user.gpa"/><br><br>
+<center><button type="submit" class="btn btn-primary" ng-click="addResume()">Create Resume</button></center>
+</form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="controllers/controller.js"></script>
+</body>
+</html>
