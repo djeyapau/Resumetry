@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+			<!-- Optional theme -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+				<title>Resumetry</title>
+			</head>
+			<body>
+				<div class="container" align="center" ng-controller="AppCtrl">
+					<h1>You are a part of the family now!</h1><br><br>
+					
+					<form name=login method="put">
+					<!-- action="/create/construct.html" -->
+					<input type="text" name="lemail" placeholder="Email" ng-model="logg.lemail" ng-trim="true" required/><br><br>
+					<input type="password" name="lpassword" placeholder="Password" ng-model="logg.lpassword" required/><br><br>
+					<a href="/create/register.html">Register</a> &nbsp&nbsp&nbsp&nbsp&nbsp <a href="/create/forgot.html">Forgot password</a><br><br>
+					<button type="submit" id="login" class="btn btn-warning" ng-click="logging()">Login</button>
+					</form>
+					<a href="/index.html">
+					<button type="cancel" id="cancel" class="btn btn-danger">Cancel</button> </a><br><br>
+					<button type="facebook" id="facebook" class="btn btn-secondary">Facebook Login</button>
+					<div ng-repeat="resu in resume">
+							{{resu.name}}
+							</div>
+</div>
+						<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+						<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+						<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"/></script>
+						<script>
+						$scope.resultemail = angular.equals($scope.logg.lemail, $scope.user.email);
+						$scope.resultpassword = angular.equals($scope.logg.lpassword, $scope.user.password);
+						console.log($scope.resultemail + "and" + $scope.resultpassword);
+						console.log($scope.user.email + " register email");
+						console.log($scope.user.password + " register password");
+						console.log($scope.logg.lemail + " login email");
+						console.log($scope.logg.lpassword + " login password");
+						</script>
+						<script src="controllers/controller.js"></script>
+					</body>
+				</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+			<!-- Optional theme -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+				<title>Resumetry</title>
+			</head>
+			<body>
+				<div class="container" ng-controller="AppCtrl">
+					<h1><center>Register yourself in!</center></h1>
+					<h4><center>Its free and always will be.</center></h4><br>
+						<form name=register method=put action="/create/login.html">
+							Full Name: &nbsp<input type="text" name="name" ng-model="user.name" ng-minlength="3" ng-maxlength="20" ng-pattern="/^[a-zA-Z\s]*$/" ng-required="true" ng-trim="true"/> (provide space between names)
+							<div role="alert">
+								<span class="error" ng-show="register.name.$error.required">
+									Required!</span>
+								<span class="error" ng-show="register.name.$error.pattern">
+									Only alphabets!</span>
+								<span class="error" ng-show="register.name.$error.maxlength">
+									Too long!</span>
+								<span class="error" ng-show="register.name.$error.minlength">
+									Too short!</span>
+							</div>
+							<br>Email: &nbsp<input type="email" id="email" name="email" ng-model="user.email" ng-required="true"/>
+								<div role="alert">
+									<span class="error" ng-show="register.email.$error.required">
+										Required!</span>
+									<span class="error" ng-show="register.email.$error.email">
+										Not valid email!</span>
+								</div>
+								<br>Password: &nbsp<input type="password" name=password1 ng-model="user.password1" ng-required="true" ng-minlength="6" ng-maxlength="10" />
+									<div role="alert">
+										<span class="error" ng-show="register.password1.$error.required">
+											Required!</span>
+										<span class="error" ng-show="register.password1.$error.maxlength">
+											Too long!</span>
+										<span class="error" ng-show="register.password1.$error.minlength">
+											Too short!</span>
+									</div>
+									<br>Re-type Password: &nbsp<input type="password" name=password2 ng-model="user.password2" ng-required="true" />
+										<div role="alert">
+											<span class="error" ng-show="register.password2.$error.required">
+												Required!</span>
+										</div>
+										<br>Gender: &nbsp<input type="radio" name=gender ng-model="user.gender" value="male" ng-required="true"/>&nbspmale
+											&nbsp&nbsp&nbsp<input type="radio" name=gender ng-model="user.gender" value="female" ng-required="true"/>&nbspfemale
+											<div role="alert">
+												<span class="error" ng-show="register.gender.$error.required">
+													Required!</span>
+											</div>
+											<br>Date of Birth: &nbsp<input type="date" name="birthday" ng-model="user.birthday"
+														placeholder="yyyy-MM-dd" ng-required="true" max="{{minAge | date:'yyyy-MM-dd'}}"/>
+												<div role="alert">
+													<span class="error" ng-show="register.birthday.$error.required">
+														Required!</span>
+													<span class="error" ng-show="register.birthday.$error.max">
+														Should atleast be 15!</span>
+												</div>
+
+												<center><button type="submit" id="send_email" class="btn btn-primary" ng-click="addResume()">Register</button></form>&nbsp&nbsp&nbsp <a href="/index.html">Cancel
+												<!-- <button type="cancel" id="cancel" class="btn btn-primary"class="navbar-link">Cancel</button> -->
+												</a></center>      
+										</div>
+										<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+										<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+										<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"/></script>
+									<script src="controllers/controller.js"></script>
+									<script>
+
+										<!-- $(document).ready(function(){ -->
+										<!-- var to,subject,text; -->
+										<!-- $("#send_email").click(function(){       -->
+										<!-- to=$("#email").val(); -->
+										<!-- subject="[Success] Resumetry registeration"; -->
+										<!-- text="You have been successfully registered to resumetry"; -->
+										<!-- console.log("ena ma nadakuthu?"); -->
+										<!-- $.get("http://localhost:3000/register",{to:to,subject:subject,text:text},function(data){ -->
+										<!-- if(data=="sent") -->
+										<!-- { -->
+										<!-- $("#message").empty().html("Email is been sent at "+to+" . Please check inbox !"); -->
+										<!-- } -->
+										<!-- }); -->
+										<!-- }); -->
+										<!-- }); -->
+
+									</script>
+								</body>
+							</html>

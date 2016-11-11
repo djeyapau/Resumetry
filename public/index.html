@@ -1,13 +1,13 @@
 <!DOCTYPE>
 <html ng-app>
-<head>
-<title>Resumeon - key to customized resume</title>
+	<head>
+		<title>Resumeon - key to customized resume</title>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<style>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<!-- Optional theme -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+				<style>
 body  {
     background-image: url("slider.jpg");
 	background-origin: padding-box;
@@ -18,28 +18,41 @@ body  {
 	top: 31%;
 	left: 25%;
 }
-</style>
-</head>
-<body>
+				</style>
+			</head>
+			<body>
 
-<nav class="navbar navbar-default navbar-fixed-top navbar-static-top navbar-inverse">
-  <div class="container-float" ng-controller="AppCtrl">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <img alt="Logo" src="logo.png">
-      </a>
-    </div>
-	<div class="container" ng-controller="AppCtrl"><b>
-	<p class="navbar-text navbar-right"><a href="#" class="navbar-link">About me</a></p>
-	  <p class="navbar-text navbar-right"><a href="#" class="navbar-link">Not a user? Register</a></p>
-	  <p class="navbar-text navbar-right"><a href="#" class="navbar-link">Login</a></p>
-	  <p class="navbar-text navbar-right"><a href="/create/profiling.html" class="navbar-link">Resume creation</a></p></b>
-	</div>
-  </div>
-</nav>
-<div class="centered">
-<img src="title.png" class="img-responsive center-block"></div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+				<nav class="navbar navbar-default navbar-fixed-top navbar-static-top navbar-inverse">
+					<div class="container-float" ng-controller="AppCtrl">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="#">
+								<img alt="Logo" src="logo.png">
+								</a>
+							</div>
+							<div class="container" ng-controller="AppCtrl">
+								<b>
+									<p class="navbar-text navbar-right">
+										<a href="#" class="navbar-link">About me</a>
+									</p>
+									<p class="navbar-text navbar-right">
+										<a href="/create/register.html" class="navbar-link">Not a user? Register</a>
+									</p>
+									<p class="navbar-text navbar-right">
+										<a href="/create/login.html" class="navbar-link">Login</a>
+									</p>
+									<p class="navbar-text navbar-right">
+										<a href="#" class="navbar-link">Resume creation</a>
+									</p>
+								</b>
+							</div>
+						</div>
+					</nav>
+					<div class="centered">
+						<img src="title.png" class="img-responsive center-block">
+						</div>
+						
+						<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"/></script>
+						<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
-</body>
-</html>
+					</body>
+				</html>
