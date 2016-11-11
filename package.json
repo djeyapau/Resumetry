@@ -1,0 +1,33 @@
+{
+  "name": "resumetry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "mongojs": "^2.4.0",
+    "nodemailer": "^2.6.4",
+    "nodemailer-smtp-transport": "^2.7.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "sendgrid": "^4.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djeyapau/Resumetry.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djeyapau/Resumetry/issues"
+  },
+  "homepage": "https://github.com/djeyapau/Resumetry#readme"
+}
